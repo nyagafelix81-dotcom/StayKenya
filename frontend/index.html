@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StayKenya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#FF385C',
+              'primary-dark': '#E31C5F',
+              'primary-light': '#FFE8EC',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: 'Inter', sans-serif; background: #F7F7F7; color: #222; }
+      #root { width: 100%; min-height: 100vh; }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #f1f1f1; }
+      ::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
+      .slide-panel { transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1); }
+      .fade-overlay { transition: opacity 0.35s ease; }
+      input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.6; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
